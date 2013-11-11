@@ -1,43 +1,40 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-			<meta charset="utf-8">
-			<meta http-equiv="X-UA-Compatible" content="IE=edge">
-			<title></title>
-			<script src="../../lib/jquery.min.js"></script>
-			<script>
-				$(function() {
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <script src="../../lib/jquery.min.js"></script>
+    <script>
+	$(function() {
 
-					challenge1();
+		// run the function 
+		challenge1();
 
+		function challenge1() {
+			// setup
+			var name, age, username, output;
 
-					function challenge1() {
-						// setup
-						var name, age, username, output;
+			// cleanup
+			$('.output').remove();
 
-						// cleanup
-						$('.output').remove();
+			// retrieve input
+			name 		= prompt("What is your name?");
+			age 		= prompt("What is your age?");
+			username 	= prompt("What us your username?");
 
-						// retrieve input
-						name 		= prompt("What is your name?");
-						age 		= prompt("What is your age?");
-						username 	= prompt("What us your username?");
+			// format output
+			output = "your name is " + name + ", you are " + age + " years old, and your username is " + username + ".";
 
-						// format output
-						output = "your name is " + name + ", you are " + age + " years old, and your username is " + username + ".";
-
-						// display output
-						$('body').append("<div class='output'>"+output+"</div>");	
-					}
-
-					var reset = $("<button></button>");
-					$(reset).text("Reset").on('click', challenge1);
-					$('body').append(reset);
-
-				});
-			</script>
-	</head>
-	<body>
-		
-	</body>
+			// display output
+			$('body').append("<div class='output'>"+output+"</div>");	
+		}
+		var reset = $("<button></button>");
+		$(reset).text("Reset").on('click', challenge1);
+		$('body').append(reset);
+	});
+	</script>
+</head>
+<body>
+</body>
 </html>
